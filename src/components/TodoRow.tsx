@@ -15,13 +15,13 @@ interface TodoRowProps {
 export function TodoRow({
   content,
   id,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   complete,
   onDeleteTask,
   setCompleteTask,
 }: TodoRowProps) {
   function deleteTask() {
     onDeleteTask(id)
-    console.log(id)
   }
 
   const [checked, setChecked] = useState<boolean>()

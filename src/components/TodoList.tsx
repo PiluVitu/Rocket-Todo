@@ -26,7 +26,6 @@ export function TodoList({ todoArray, setTodoList }: TodoArrayProps) {
       return todo
     })
     setTodoList(newTodoArray)
-    console.log(` A task: ${id} está completa ? ${complete}`)
   }
 
   function deleteTask(id: string) {
