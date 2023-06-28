@@ -12,8 +12,7 @@ export interface Todo {
 
 interface TodoArrayProps {
   todoArray: Todo[]
-  setTodoList: (value: object[]) => void
-  onCheckedTask: () => void
+  setTodoList: (value: Todo[]) => void
 }
 
 export function TodoList({ todoArray, setTodoList }: TodoArrayProps) {

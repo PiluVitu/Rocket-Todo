@@ -7,9 +7,15 @@ import { TodoList } from './components/TodoList'
 
 import './global.css'
 
+interface TodoProps {
+  id: string
+  complete: boolean
+  text: string
+}
+
 function App() {
   const [newTask, setNewTask] = useState('')
-  const [todoList, setTodoList] = useState<object[]>([])
+  const [todoList, setTodoList] = useState<TodoProps[]>([])
 
   function handleNewTask(event: ChangeEvent<HTMLInputElement>) {
     const content = event.target.value
