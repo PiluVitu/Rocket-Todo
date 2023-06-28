@@ -15,7 +15,6 @@ interface TodoRowProps {
 export function TodoRow({
   content,
   id,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   complete,
   onDeleteTask,
   setCompleteTask,
@@ -28,6 +27,7 @@ export function TodoRow({
 
   function handleSetCheckedTask() {
     if (checked === false || checked === undefined) {
+      console.log(complete)
       setChecked(true)
       setCompleteTask(id, (complete = true))
     }
